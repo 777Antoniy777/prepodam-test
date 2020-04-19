@@ -1,0 +1,81 @@
+.main-header {
+  padding-top: 10px;
+  padding-bottom: 32px;
+  background-color: $menu-open-bg;
+}
+
+.main-header a,
+.main-header span {
+  font-family: $montserrat;
+  color: $w;
+}
+
+.main-header__nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 88px 1fr;
+  grid-template-areas: "city logo button" "links links links";
+  column-gap: 20px;
+  row-gap: 46px;
+  justify-items: center;
+  align-items: center;
+}
+
+.nav__wrapper {
+  grid-area: links;
+  width: 100%;
+}
+
+.nav__city {
+  grid-area: city;
+}
+
+.nav__logo {
+  grid-area: logo;
+}
+
+.nav__button {
+  grid-area: button;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/svg/close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+  border: none;
+  outline: auto;
+}
+
+.nav__list {
+  @include reset-list();
+
+  &--sections {
+    margin-bottom: 39px;
+    padding-bottom: 39px;
+    border-bottom: 1px solid #696969;
+  }
+
+  &--user {
+    margin-bottom: 25px;
+  }
+}
+
+.nav__item {
+  margin-bottom: 35px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.nav__teachers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 40px;
+  margin: 0 auto;
+  border: 2px solid $border-cr;
+  border-radius: 4px;
+}
