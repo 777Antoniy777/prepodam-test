@@ -1,8 +1,8 @@
 // font
-$montserrat-medium: "MontserratMedium";
-$montserrat-semibold: "MontserratSemibold";
-$opensans: "OpenSans";
-$montserrat: "Montserrat";
+$montserrat-medium: "MontserratMedium", "Arial", sans-serif;
+$montserrat-semibold: "MontserratSemibold", "Arial", sans-serif;
+$opensans: "OpenSans", "Arial", sans-serif;
+$montserrat: "Montserrat", "Arial", sans-serif;
 
 // color
 $w: #ffffff;
@@ -11,7 +11,7 @@ $border-cr: #fe8057;
 
 // bg
 $menu-open-bg: #25262a;
-$intro-bg: #c4eeff;
+$intro-bg: #798386;
 
 // @media
 $media-dt: 1024px;

@@ -1,13 +1,9 @@
 .main-header {
   padding-top: 10px;
-  padding-bottom: 32px;
-  background-color: $menu-open-bg;
-}
-
-.main-header a,
-.main-header span {
+  padding-bottom: 10px;
   font-family: $montserrat;
   color: $w;
+  background-color: $menu-open-bg;
 }
 
 .main-header__nav {
@@ -16,12 +12,13 @@
   grid-template-rows: 88px 1fr;
   grid-template-areas: "city logo button" "links links links";
   column-gap: 20px;
-  row-gap: 46px;
+  row-gap: 0;
   justify-items: center;
   align-items: center;
 }
 
 .nav__wrapper {
+  display: none;
   grid-area: links;
   width: 100%;
 }
@@ -38,7 +35,7 @@
   grid-area: button;
   width: 40px;
   height: 40px;
-  background-image: url("../img/svg/close.svg");
+  background-image: url("../img/svg/burger.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: transparent;
@@ -76,6 +73,29 @@
   width: 200px;
   min-height: 40px;
   margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $montserrat-medium;
+  text-transform: uppercase;
+  text-align: center;
   border: 2px solid $border-cr;
   border-radius: 4px;
+}
+
+// menu styles
+.menu-open .nav__wrapper {
+  display: block;
+}
+
+.menu-open .main-header__nav {
+  row-gap: 46px;
+}
+
+.menu-open .main-header {
+  padding-bottom: 32px;
+}
+
+.menu-open .nav__button {
+  background-image: url("../img/svg/close.svg");
 }

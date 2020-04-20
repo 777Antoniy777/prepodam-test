@@ -41,13 +41,13 @@ gulp.task("css", function () {
 gulp.task("js", function () {
   return gulp.src("src/js/**/*.js")
     .pipe(sourcemaps.init())
+    .pipe(rename("all.min.js"))
     .pipe(jsconcat("all.js"))
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
     .pipe(gulp.dest("build/js"))
     .pipe(jsuglify())
-    .pipe(rename("all.min.js"))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
