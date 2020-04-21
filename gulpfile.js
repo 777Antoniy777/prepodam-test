@@ -14,10 +14,13 @@ var objectfit = require(`postcss-object-fit-images`);
 var jsconcat = require('gulp-concat');
 var jsuglify = require("gulp-uglify");
 var babel = require('gulp-babel');
+var webpack = require('webpack-stream');
 var svgsprite = require('gulp-svg-sprite');
 var sourcemaps = require(`gulp-sourcemaps`);
 var del = require("del");
 var server = require("browser-sync").create();
+
+var through = require('through2');
 
 // css
 gulp.task("css", function () {
@@ -40,15 +43,18 @@ gulp.task("css", function () {
 // js
 gulp.task("js", function () {
   return gulp.src("src/js/**/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(rename("all.min.js"))
-    .pipe(jsconcat("all.js"))
-    .pipe(babel({
-      presets: ['@babel/preset-env']
-    }))
-    .pipe(gulp.dest("build/js"))
-    .pipe(jsuglify())
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.init())
+    .pipe(webpack())
+    .pipe(rename("all.js"))
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(through.obj(function (file, enc, cb) {
+    //   // Dont pipe through any source map files as it will be handled
+    //   // by gulp-sourcemaps
+    //   const isSourceMap = /\.map$/.test(file.path);
+    //   if (!isSourceMap) this.push(file);
+    //   cb();
+    // }))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
