@@ -1,19 +1,13 @@
-import Swiper from 'swiper';
+import { tns } from '../../../node_modules/tiny-slider/src/tiny-slider';
 
-console.log(Swiper)
-// const slider = document.querySelector('.programme___slider');
-
-let swiper = new Swiper('.swiper-container', {
-  speed: 400,
-  grabCursor: true,
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 30,
-  centeredSlides: true,
+const slider = tns({
+  container: '.programme___slider',
+  items: 2,
+  slideBy: 1,
+  center: true,
+  fixedWidth: 240,
+  gutter: 10,
+  arrowKeys: true,
 });
 
-console.log(swiper);
-
-// slider = document.querySelector('.slider').swiper;
-
-// console.log(swiper);
+console.log(slider)

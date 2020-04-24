@@ -10,17 +10,18 @@
   align-items: center;
 }
 
-.swiper-wrapper {
-  display: flex;
-  // justify-content: center;
-  // align-items: center;
-  font-size: 18px;
-  text-align: center;
-}
+// .swiper-wrapper {
+//   display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   font-size: 18px;
+//   text-align: center;
+// }
 
 .swiper-slide {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  // width: 320px;
+  width: 320px;
 }

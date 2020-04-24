@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "slick-carousel": "^1.8.1",
-    "swiper": "^5.3.7"
+    "swiper": "^5.3.7",
+    "tiny-slider": "^2.9.2"
   }
 }
