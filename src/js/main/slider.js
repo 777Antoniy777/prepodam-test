@@ -5,9 +5,13 @@ const slider = tns({
   items: 2,
   slideBy: 1,
   center: true,
-  fixedWidth: 240,
+  fixedWidth: 260,
   gutter: 10,
-  arrowKeys: true,
+  controls: false,
+  nav: false,
 });
 
-console.log(slider)
+const nav = document.querySelector('.tns-liveregion');
+nav.style.display = 'none';
+
+console.log(slider.getInfo(), nav);

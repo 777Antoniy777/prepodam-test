@@ -11,16 +11,11 @@ var rename = require("gulp-rename");
 var image = require("gulp-image");
 var webp = require("gulp-webp");
 var objectfit = require(`postcss-object-fit-images`);
-var jsconcat = require('gulp-concat');
-var jsuglify = require("gulp-uglify");
-var babel = require('gulp-babel');
 var webpack = require('webpack-stream');
 var svgsprite = require('gulp-svg-sprite');
 var sourcemaps = require(`gulp-sourcemaps`);
 var del = require("del");
 var server = require("browser-sync").create();
-
-var through = require('through2');
 
 // css
 gulp.task("css", function () {
