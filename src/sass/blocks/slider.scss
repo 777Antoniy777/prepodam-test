@@ -9,28 +9,28 @@
   min-height: 410px;
 }
 
-.slider__item img {
+.slider__image {
   width: 100%;
   min-height: 410px;
   max-height: 410px;
   margin: 0 auto;
   object-fit: cover;
-  // object-position: 0 -30px;
+  object-position: 0 0;
 }
 
 .slider__inner-wrapper {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
+  width: calc(100% - 16px);
   min-height: 100px;
   margin: 0 auto;
+  padding: 5px 10px;
   text-align: center;
   background-color: rgba($b, 0.5);
-  transform: translateX(-50%);
 }
 
 .slider__inner-wrapper h3 {
