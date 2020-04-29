@@ -40,7 +40,10 @@ slider.events.on('indexChanged', (evt) => {
     const nextElem = elem.nextElementSibling;
 
     if (prevElem && nextElem) {
-      if (prevElem.classList.contains('tns-slide-active') && nextElem.classList.contains('tns-slide-active')) {
+      const isActivePrev = prevElem.classList.contains('tns-slide-active');
+      const isActiveNext = nextElem.classList.contains('tns-slide-active');
+
+      if (isActivePrev && isActiveNext) {
         elem.classList.add('active-height');
         slideImage.classList.add('active-height');
       }
