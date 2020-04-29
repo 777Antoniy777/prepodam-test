@@ -1,0 +1,47 @@
+.intro {
+  min-height: 480px;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 153px;
+  padding-bottom: 59px;
+  color: $w;
+  text-align: center;
+  background-image:
+    linear-gradient(to bottom, rgba($b, 0.4)),
+    url("../img/intro-bg-tb.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+  background-color: $intro-bg;
+}
+
+.intro__title {
+  padding-bottom: 41px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: $montserrat;
+  letter-spacing: 0.1px;
+}
+
+.intro__title span {
+  color: $border-cr;
+}
+
+.intro__description {
+  font-family: $opensans;
+  padding-bottom: 66px;
+}
+
+.intro__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 304px;
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  background-color: $border-cr;
+  border-radius: 4px;
+}
