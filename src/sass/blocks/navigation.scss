@@ -1,0 +1,72 @@
+.nav {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.nav__wrapper {
+  display: none;
+  grid-area: links;
+  width: 100%;
+}
+
+.nav__city {
+  grid-area: city;
+  text-align: center;
+}
+
+.nav__logo {
+  grid-area: logo;
+}
+
+.nav__button {
+  grid-area: button;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/svg/burger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__list {
+  @include reset-list();
+
+  &--sections {
+    margin-bottom: 26px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #696969;
+  }
+
+  &--user {
+    margin-bottom: 17px;
+  }
+}
+
+.nav__item {
+  margin-bottom: 27px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.nav__teachers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $montserrat-medium;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid $border-cr;
+  border-radius: 4px;
+}

@@ -2,7 +2,7 @@
   min-height: 480px;
   font-size: 12px;
   line-height: 16px;
-  padding-top: 154px;
+  padding-top: 153px;
   padding-bottom: 59px;
   color: $w;
   text-align: center;
@@ -15,7 +15,7 @@
 }
 
 .intro__title {
-  padding-bottom: 46px;
+  padding-bottom: 41px;
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
@@ -29,7 +29,7 @@
 
 .intro__description {
   font-family: $opensans;
-  padding-bottom: 64px;
+  padding-bottom: 66px;
 }
 
 .intro__link {
@@ -41,6 +41,7 @@
   margin: 0 auto;
   padding: 5px 10px;
   text-transform: uppercase;
+  letter-spacing: 0.2px;
   background-color: $border-cr;
   border-radius: 4px;
 }

@@ -9,13 +9,22 @@
   min-height: 410px;
 }
 
+.slider__item a {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  min-height: inherit;
+  overflow: hidden;
+}
+
 .slider__image {
   width: 100%;
   min-height: 410px;
   max-height: 410px;
   margin: 0 auto;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: 70% 34px;
+  transform: scale(1.2);
 }
 
 .slider__inner-wrapper {
@@ -26,7 +35,7 @@
   justify-content: center;
   align-items: center;
   width: calc(100% - 16px);
-  min-height: 100px;
+  min-height: 91px;
   margin: 0 auto;
   padding: 5px 10px;
   text-align: center;
@@ -40,7 +49,12 @@
   color: $w;
 }
 
-.active-height {
+// active slide
+.active-slide {
   min-height: 450px;
   max-height: 450px;
+}
+
+.active-slide .slider__inner-wrapper {
+  min-height: 100px;
 }

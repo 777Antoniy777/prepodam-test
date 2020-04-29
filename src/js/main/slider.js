@@ -4,7 +4,7 @@ const slider = tns({
   container: '.programme___slider',
   items: 1,
   slideBy: 1,
-  edgePadding: 15,
+  edgePadding: 22,
   gutter: 16,
   center: true,
   controls: false,
@@ -22,8 +22,8 @@ if (slider.isOn) {
   const activeSlideImage = activeSlide.querySelector('img');
 
   outerWrapper.style.overflow = 'visible';
-  activeSlide.classList.add('active-height');
-  activeSlideImage.classList.add('active-height');
+  activeSlide.classList.add('active-slide');
+  activeSlideImage.classList.add('active-slide');
 }
 
 slider.events.on('indexChanged', (evt) => {
@@ -33,8 +33,8 @@ slider.events.on('indexChanged', (evt) => {
   slideItemsArr.forEach(elem => {
     const slideImage = elem.querySelector('img');
 
-    elem.classList.remove('active-height');
-    slideImage.classList.remove('active-height');
+    elem.classList.remove('active-slide');
+    slideImage.classList.remove('active-slide');
 
     const prevElem = elem.previousElementSibling;
     const nextElem = elem.nextElementSibling;
@@ -44,8 +44,8 @@ slider.events.on('indexChanged', (evt) => {
       const isActiveNext = nextElem.classList.contains('tns-slide-active');
 
       if (isActivePrev && isActiveNext) {
-        elem.classList.add('active-height');
-        slideImage.classList.add('active-height');
+        elem.classList.add('active-slide');
+        slideImage.classList.add('active-slide');
       }
     }
   });
