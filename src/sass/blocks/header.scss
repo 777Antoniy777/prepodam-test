@@ -1,0 +1,75 @@
+.main-header {
+  position: absolute;
+  z-index: 2;
+  min-width: inherit;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $montserrat;
+  color: $w;
+  background-color: transparent;
+
+  @media (min-width: $media-tb) {
+    padding-top: 11px;
+  }
+
+  @media (min-width: $media-dt) {
+    padding-top: 10px;
+  }
+}
+
+// menu styles
+.menu-open .main-header,
+.no-js .main-header {
+  position: static;
+  min-height: 480px;
+  height: 100vh;
+  padding-bottom: 32px;
+  background-color: $menu-open-bg;
+
+  @media (min-width: $media-tb) {
+    position: absolute;
+    min-height: initial;
+    height: initial;
+    background-color: transparent;
+  }
+}
+
+.menu-open .main-header__nav,
+.no-js .main-header__nav {
+  row-gap: 40px;
+}
+
+.menu-open .nav__wrapper,
+.no-js .nav__wrapper {
+  display: block;
+
+  @media (min-width: $media-tb) {
+    display: flex;
+  }
+}
+
+.menu-open .nav__list--user,
+.no-js .nav__list--user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-open .nav__button {
+  background-image: url("../img/svg/close.svg");
+}
+
+.no-js .nav__button {
+  display: none;
+}
+
+.menu-open .intro,
+.no-js .intro {
+  height: initial;
+
+  @media (min-width: $media-tb) {
+    height: 100vh;
+  }
+}

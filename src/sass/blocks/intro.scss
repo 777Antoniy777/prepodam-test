@@ -1,0 +1,151 @@
+.intro {
+  position: relative;
+  min-height: 480px;
+  height: 100vh;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 153px;
+  padding-bottom: 59px;
+  color: $w;
+  text-align: center;
+  background-image:
+    linear-gradient(to bottom, rgba($b, 0.4)),
+    url("../img/intro-bg-tb.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+  background-color: $intro-bg;
+
+  @media (min-width: $media-tb) {
+    min-height: 766px;
+    padding-top: 236px;
+    font-size: 14px;
+    line-height: 18px;
+    background-size: 100%, cover;
+    background-position: 52% 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      width: 30px;
+      height: 41px;
+      background-image: url("../img/svg/mouse.svg");
+      background-repeat: no-repeat;
+      animation-name: shake;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.intro .site-wrapper {
+  @media (min-width: $media-tb) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.intro__title {
+  padding-bottom: 41px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: $montserrat;
+  letter-spacing: 0.1px;
+
+  @media (min-width: $media-tb) {
+    width: 518px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: left;
+    letter-spacing: 0.2px;
+  }
+}
+
+.intro__title span {
+  color: $border-cr;
+}
+
+.intro__description {
+  font-family: $opensans;
+  padding-bottom: 66px;
+
+  @media (min-width: $media-tb) {
+    width: 412px;
+    padding-bottom: 38px;
+    text-align: left;
+  }
+}
+
+.intro__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 304px;
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  background-color: $border-cr;
+  border-radius: 4px;
+
+  @media (min-width: $media-tb) {
+    margin: 0 108px 0 auto;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+// animation
+@keyframes shake {
+  0% {
+    bottom: 50px;
+  }
+
+  10% {
+    bottom: 48px;
+  }
+
+  20% {
+    bottom: 50px;
+  }
+
+  30% {
+    bottom: 52px;
+  }
+
+  40% {
+    bottom: 50px;
+  }
+
+  100% {
+    bottom: 50px;
+  }
+}
+
+// @keyframes shake {
+//   0% {
+//     bottom: 50px;
+//   }
+
+//   25% {
+//     bottom: 48px;
+//   }
+
+//   50% {
+//     bottom: 50px;
+//   }
+
+//   75% {
+//     bottom: 52px;
+//   }
+
+//   100% {
+//     bottom: 50px;
+//   }
+// }
