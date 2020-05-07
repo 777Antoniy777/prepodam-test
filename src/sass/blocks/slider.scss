@@ -1,12 +1,23 @@
 .slider {
   display: flex;
   align-items: center;
+
+  @media (min-width: $media-tb) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
 }
 
 .slider__item {
   position: relative;
   width: 260px;
   min-height: 410px;
+
+  @media (min-width: $media-tb) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .slider__item a {
@@ -25,6 +36,13 @@
   object-fit: cover;
   object-position: 70% 34px;
   transform: scale(1.2);
+
+  @media (min-width: $media-tb) {
+    min-height: 450px;
+    max-height: 450px;
+    object-position: 50% 0;
+    transform: none;
+  }
 }
 
 .slider__inner-wrapper {
@@ -40,6 +58,11 @@
   padding: 5px 10px;
   text-align: center;
   background-color: rgba($b, 0.5);
+
+  @media (min-width: $media-tb) {
+    width: 100%;
+    min-height: 101px;
+  }
 }
 
 .slider__inner-wrapper h3 {
@@ -47,6 +70,11 @@
   font-size: 18px;
   line-height: 22px;
   color: $w;
+
+  @media (min-width: $media-tb) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 // active slide
