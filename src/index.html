@@ -32,13 +32,19 @@
           <span class="nav__city">Москва</span>
     
           <a class="nav__logo">
-            <img src="img/svg/logo.svg" width="88" height="88" alt="Лого Преподам">
+            <svg class="nav__logo-image" aria-label="Лого Преподам">
+              <use xlink:href="img/sprite/sprite.svg#logo"></use>
+            </svg>
           </a>
     
           <button class="nav__button" type="button" aria-label="Меню сайта"></button>
   
           <div class="nav__wrapper">
             <ul class="nav__list nav__list--sections">
+
+              <li class="nav__item nav__item--tel">
+                <a href="tel:78005623452">+7 800-562-3452</a>
+              </li>
     
               <li class="nav__item">
                 <a href="#">О проекте</a>
@@ -92,6 +98,8 @@
           <div class="site-wrapper">
 
             <h2 class="programme__title">Выберите свою программу</h2>
+
+            <p class="programme__description">199 преподавателей уже работает на сайте</p>
             
             <div class="programme___slider slider">
   

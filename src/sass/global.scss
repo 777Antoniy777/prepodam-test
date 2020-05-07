@@ -20,6 +20,11 @@ body {
   font-family: $montserrat-medium;
   color: $b;
   overflow-x: hidden;
+
+  @media (min-width: $media-tb) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .site-wrapper {
@@ -27,6 +32,10 @@ body {
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: $media-tb) {
+    width: 952px * 100% / 1024px;
+  }
 }
 
 a {
