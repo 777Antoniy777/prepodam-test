@@ -19,6 +19,15 @@
     column-gap: 15px;
     align-content: center;
   }
+
+  @media (min-width: $media-dt) {
+    grid-template-columns: 111px minmax(auto, 90px) 1fr;
+    grid-template-rows: 111px;
+    grid-template-areas: "logo city links";
+    column-gap: 28px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .nav__wrapper {
@@ -36,19 +45,13 @@
 .nav__city {
   grid-area: city;
   text-align: center;
-}
 
-.nav__logo {
-  grid-area: logo;
-  width: 88px;
-  height: 88px;
-
-  @media (min-width: $media-tb) {
-    width: 108px;
-    height: 108px;
+  @media (min-width: $media-dt) {
+    letter-spacing: 0.2px;
   }
 }
 
+.nav__logo,
 .nav__logo-image {
   width: 88px;
   height: 88px;
@@ -57,8 +60,16 @@
     width: 108px;
     height: 108px;
   }
+
+  @media (min-width: $media-dt) {
+    width: 111px;
+    height: 111px;
+  }
 }
 
+.nav__logo {
+  grid-area: logo;
+}
 
 .nav__button {
   grid-area: button;
@@ -70,6 +81,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $media-dt) {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -90,6 +105,10 @@
       padding-bottom: 0;
       border-bottom: none;
     }
+
+    @media (min-width: $media-dt) {
+      margin-right: 92px * 100% / 1031px;
+    }
   }
 
   &--user {
@@ -108,6 +127,23 @@
       color: $b;
       background-color: $w;
       border-radius: 10px 0 10px 10px;
+    }
+
+    @media (min-width: $media-dt) {
+      position: static;
+      display: flex;
+      order: 3;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      width: initial;
+      min-height: initial;
+      padding: initial;
+      padding-top: 10px;
+      font-family: $montserrat;
+      color: $w;
+      background-color: initial;
+      border-radius: initial;
     }
   }
 }
@@ -140,6 +176,17 @@
       margin-bottom: 10px;
     }
   }
+
+  @media (min-width: $media-dt) {
+    margin-right: 32px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .nav__list--user .nav__item {
@@ -151,6 +198,17 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $media-dt) {
+    width: initial;
+    margin-bottom: 10px;
+    margin-right: 27px;
+
+    &:last-child {
+      margin-bottom: 10px;
+      margin-right: 0;
     }
   }
 }
@@ -194,5 +252,13 @@
     margin: 0;
     font-size: 10px;
     line-height: 12px;
+  }
+
+  @media (min-width: $media-dt) {
+    width: 200px;
+    margin-right: 38px * 100% / 1031px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
   }
 }

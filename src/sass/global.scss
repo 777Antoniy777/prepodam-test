@@ -25,6 +25,11 @@ body {
     font-size: 14px;
     line-height: 18px;
   }
+
+  @media (min-width: $media-dt) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .site-wrapper {
@@ -35,6 +40,10 @@ body {
 
   @media (min-width: $media-tb) {
     width: 952px * 100% / 1024px;
+  }
+
+  @media (min-width: $media-dt) {
+    width: 1280px * 100% / 1440px;
   }
 }
 
