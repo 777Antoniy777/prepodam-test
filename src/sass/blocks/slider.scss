@@ -42,6 +42,18 @@
     max-height: 450px;
     object-position: 50% 0;
     transform: none;
+
+    &--top {
+      object-position: 50% 86%;
+    }
+  }
+
+  @media (min-width: $media-dt) {
+    transform: scale(1.05);
+
+    &--top {
+      object-position: 70% 21%;
+    }
   }
 }
 
@@ -51,17 +63,28 @@
   bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: calc(100% - 16px);
   min-height: 91px;
   margin: 0 auto;
-  padding: 5px 10px;
+  padding: 5px 10px 30px;
   text-align: center;
   background-color: rgba($b, 0.5);
+  transition:
+    min-height 0.3s,
+    background-color 0.3s;
 
   @media (min-width: $media-tb) {
     width: 100%;
     min-height: 101px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: $media-dt) {
+    min-height: 100px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 }
 
@@ -75,6 +98,11 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media (min-width: $media-dt) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 // active slide
@@ -85,4 +113,10 @@
 
 .active-slide .slider__inner-wrapper {
   min-height: 100px;
+}
+
+// hover
+.slider__item:hover .slider__inner-wrapper {
+  min-height: 100%;
+  background-color: rgba($b, 0.3);
 }
