@@ -13,7 +13,6 @@ let slider = tns({
 });
 
 const mql = window.matchMedia('(max-width: 767px)');
-console.log(mql);
 
 const isMediaTb = (e) => {
   if (slider.isOn) slider.destroy();
@@ -29,8 +28,6 @@ const isMediaTb = (e) => {
       const activeSlideIndex = sliderOptions.index;
       const activeSlide = slideItemsArr[activeSlideIndex];
       const activeSlideImage = activeSlide.querySelector('img');
-
-      console.log(outerWrapper);
 
       outerWrapper.style.overflow = 'visible';
       activeSlide.classList.add('active-slide');

@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 var posthtml = require("gulp-posthtml");
+var fileinclude = require('gulp-file-include');
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -95,7 +96,11 @@ gulp.task('sprite', function () {
 
 // html
 gulp.task("html", function() {
-  return gulp.src("src/*.html")
+  return gulp.src(["src/pages/*.html"])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: 'src/pages/'
+    }))
     .pipe(posthtml())
     .pipe(gulp.dest("build"));
 });
