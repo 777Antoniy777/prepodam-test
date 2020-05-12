@@ -9,6 +9,12 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media (min-width: $media-dt) {
+    padding-top: 120px;
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .programme .site-wrapper {
@@ -29,6 +35,12 @@
     padding-bottom: 77px;
     font-size: 24px;
     line-height: 28px;
+  }
+
+  @media (min-width: $media-dt) {
+    padding-bottom: 94px;
+    font-size: 30px;
+    line-height: 34px;
   }
 }
 
@@ -51,5 +63,13 @@ p.programme__description {
     border: 2px solid $border-cr;
     border-radius: 25px;
     color: $border-cr;
+  }
+
+  @media (min-width: $media-dt) {
+    width: 700px;
+    min-height: 60px;
+    margin-bottom: 134px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }

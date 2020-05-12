@@ -11,6 +11,7 @@
   background-image:
     linear-gradient(to bottom, rgba($b, 0.4)),
     url("../img/intro-bg-tb.jpg");
+  background-size: 100%, cover;
   background-repeat: no-repeat;
   background-position: 70% 0;
   background-color: $intro-bg;
@@ -20,7 +21,6 @@
     padding-top: 236px;
     font-size: 14px;
     line-height: 18px;
-    background-size: 100%, cover;
     background-position: 52% 0;
 
     &::before {
@@ -37,6 +37,21 @@
       animation-iteration-count: infinite;
       animation-timing-function: ease-out;
       transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: $media-dt) {
+    min-height: 880px;
+    padding-top: 238px;
+    padding-bottom: 135px;
+    font-size: 16px;
+    line-height: 20px;
+    background-image:
+      linear-gradient(to bottom, rgba($b, 0.4)),
+      url("../img/intro-bg-dt.jpg");
+
+    &::before {
+      bottom: 82px;
     }
   }
 }
@@ -64,6 +79,14 @@
     text-align: left;
     letter-spacing: 0.2px;
   }
+
+  @media (min-width: $media-dt) {
+    width: 630px;
+    padding-bottom: 38px;
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 0.3px;
+  }
 }
 
 .intro__title span {
@@ -79,6 +102,26 @@
     padding-bottom: 38px;
     text-align: left;
   }
+
+  @media (min-width: $media-dt) {
+    position: relative;
+    width: 630px;
+    padding-right: 10px;
+    padding-left: 216px;
+    padding-bottom: 55px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      left: 19px;
+      width: 180px;
+      height: 65px;
+      background-image: url("../img/svg/stars.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .intro__link {
@@ -92,6 +135,7 @@
   text-transform: uppercase;
   letter-spacing: 0.2px;
   background-color: $border-cr;
+  border: 2px solid $border-cr;
   border-radius: 4px;
 
   @media (min-width: $media-tb) {
@@ -99,6 +143,28 @@
     font-size: 12px;
     line-height: 16px;
   }
+}
+
+.intro__span {
+  display: none;
+
+  @media (min-width: $media-dt) {
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $montserrat-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transform: translateX(-50%);
+  }
+}
+
+// hover
+.intro__link:hover {
+  background-color: transparent;
 }
 
 // animation
@@ -128,24 +194,30 @@
   }
 }
 
-// @keyframes shake {
-//   0% {
-//     bottom: 50px;
-//   }
+@media (min-width: $media-dt) {
+  @keyframes shake {
+    0% {
+      bottom: 82px;
+    }
 
-//   25% {
-//     bottom: 48px;
-//   }
+    10% {
+      bottom: 80px;
+    }
 
-//   50% {
-//     bottom: 50px;
-//   }
+    20% {
+      bottom: 82px;
+    }
 
-//   75% {
-//     bottom: 52px;
-//   }
+    30% {
+      bottom: 84px;
+    }
 
-//   100% {
-//     bottom: 50px;
-//   }
-// }
+    40% {
+      bottom: 82px;
+    }
+
+    100% {
+      bottom: 82px;
+    }
+  }
+}
